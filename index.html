@@ -33,7 +33,7 @@
           <a class="logo" href="./index.html">Web<span class="logo-black">Studio</span></a>
           <ul class="nav-list">
             <li>
-              <a href="#">Agencja</a>
+              <a class="is-active" href="#">Agencja</a>
             </li>
             <li><a href="./portfolio.html">Portfolio</a></li>
             <li>
@@ -63,9 +63,15 @@
       <section class="order section">
         <div class="container">
           <h1>Efektywne rozwiązania dla waszego biznesu</h1>
-          <button type="button">Zamów usługę</button>
+          <button type="button" data-modal-open>Zamów usługę</button>
         </div>
       </section>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+<button type="button" class="close-btn" data-modal-close>X</button>
+  </div>
+</div>
 
       <!-- LOREM  -->
       <section class="section articles-bg">
@@ -129,7 +135,9 @@
           <h2 class="about-us">Czym się zajmujemy</h2>
           <ul class="profession-list">
             <li>
-              <img src="./images/profession/tech-1.jpg" width="370" height="294" alt="Typing" />
+              <img src="./images/profession/tech-1.jpg" width="370" height="294" alt="Typing" 
+              />
+              <p class="profession-description">Aplikacje komputerowe</p>
             </li>
             <li>
               <img
@@ -138,6 +146,7 @@
                 height="294"
                 alt="working on a phone and computer"
               />
+               <p class="profession-description">Aplikacje mobilne</p>
             </li>
             <li>
               <img
@@ -146,6 +155,7 @@
                 height="294"
                 alt="working on a laptop "
               />
+              <p class="profession-description">Aplikacje graficzne</p>
             </li>
           </ul>
         </div>
@@ -385,5 +395,13 @@
         </div>
       </div>
     </footer>
+
+      <!-- MODAL WINDOW -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" data-modal-close>&#x2716;</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
